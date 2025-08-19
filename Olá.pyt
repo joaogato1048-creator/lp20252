@@ -155,14 +155,16 @@ print('Litros de combustível consumidos')
 
 P = float (input('valor da parcela'))
 
+
 J = float (input('juros'))
 
 T = float(input('periodo'))
 
-print(f'parcela_com_juros : R$ {P*J}')
+print(P * J * T)
 
 
-print(f'valor final: R$  {P*T }')
+
+
 
 
 
