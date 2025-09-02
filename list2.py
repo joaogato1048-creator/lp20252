@@ -27,21 +27,63 @@ def exemploSe_SenaoSe_Senao():
         print('Idoso')
     print('fim do programa')
 
+def cabecalho (titulo):
+    print('========================================')
+    print(f'============= {titulo} ===============')
+    print('========================================')
 
 #1. Faça um programa que leia dois valores numéricos inteiros e efetue
 #   a adição, caso o resultado seja maior que 10, apresentá-lo.
+def q1():
+    numero1 = int(input('Digite um número inteiro: '))
+    numero2 = int(input('Digite outro número inteiro: '))
+    result = numero1 + numero2
+    if result > 10:
+        print('esse numero é:', result )   
+
+
 
 #2. Faça um programa que leia dois valores inteiros e efetue a adição.
 #   Caso o valor somado seja maior que 20, este deverá ser apresentado
 #   somando-se a ele mais 8, caso o valor somado seja menor ou igual a
 #   20, este deverá ser apresentado subtraindo-se 5.
+def q2():
+    x = 8
+    b = 5
+    numero1 = int(input('Digite um número inteiro: '))
+    numero2 = int(input('Digite outro número inteiro: '))
+    result = numero1 + numero2
+    if result > 20:
+        print('esse numero é:', result + x )
+    else:
+        print('esse numero é:', result - b )  
 
 #3. Faça um programa que leia um número e imprima uma das duas mensagens:
 #   "É múltiplo de 3"ou "Não é múltiplo de 3".
+def q3():
+    numero1 = int(input('Digite um número inteiro: '))
+    if numero1 % 3 == 0:
+        print('esse numero é multiplo:', numero1 )
+    else:
+        print('esse numero não é muktiplo de 3:', numero1 )  
 
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
+def q4():
 
+    numero_1 = int(input('digite um numero inteiro:'))
+    if numero_1 % 5 == 0:
+        print('é divisivel:', numero_1)
+    else:
+        print('nao é divisivel:', numero_1)
+    print("fim da linha jogador ")
 #5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
+def q5():
+    numero_1 = float(input('digite um numero inteiro:'))
+    if {numero_1 % 3  == 0} & { numero_1 % 7 == 0} 
+        print('numero divisivel', numero_1)    
+    else:
+        print('nao divisivel', numero_1)
+   
 
 #6. A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários
 #   estatutários. O valor máximo da prestação não poderá ultrapassar 30% do salário
@@ -170,3 +212,42 @@ def exemploSe_SenaoSe_Senao():
 #0,3 1º grupo
 #0,4 1º e 2º grupos
 #0,5 1º, 2º e 3º grupos
+
+
+
+
+def q20():
+    cabecalho('QUESTÃO 20')
+
+menu = '''
+[1] - Imprimir nome
+[2] - Imprimir produto
+[3] - Imprimir média
+[4] - Imprimir inteiro
+[5] - Ler e imprimir números reais
+[6] - Antecessor e Sucessor
+[7] - Dados de cliente
+[8] - Subtração
+[9] - 1/4
+[10] - Média Aritmética
+[11] - Operações aritméticas básicas
+[12] - Quadrado de um número
+[13] - Saldo de poupança
+[14] - Área e perímetro de um retângulo
+[15] - Desconto em produto
+[16] - Reajuste Salarial
+[17] - Conversão de temperatura
+[18] - Consumo de veículo
+[19] - Juros de prestação atrasada
+[20] - Conversão dólar-real
+[21] - Reajuste Salarial
+[22] - Conversão de temperatura
+[23] - Consumo de veículo
+[24] - Juros de prestação atrasada
+[25] - Conversão dólar-real
+
+Digite a opção a ser executada: 
+'''
+
+opcao = input(menu)
+eval(f'q{opcao}()')
