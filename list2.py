@@ -2,6 +2,10 @@
 Exercícios sobre os comandos de condição em python
 '''
 
+from datetime import date, datetime
+HOJE = datetime.now() #pega data e hjora do coputador 
+
+
 def exemploSe():
     idade = int(input('Idade:'))
     if idade >= 18:
@@ -32,73 +36,111 @@ def cabecalho (titulo):
     print(f'============= {titulo} ===============')
     print('========================================')
 
-#1. Faça um programa que leia dois valores numéricos inteiros e efetue
-#   a adição, caso o resultado seja maior que 10, apresentá-lo.
-def q1():
-    numero1 = int(input('Digite um número inteiro: '))
-    numero2 = int(input('Digite outro número inteiro: '))
-    result = numero1 + numero2
-    if result > 10:
-        print('esse numero é:', result )   
+    #1. Faça um programa que leia dois valores numéricos inteiros e efetue
+    #   a adição, caso o resultado seja maior que 10, apresentá-lo.
+    def q1():
+        numero1 = int(input('Digite um número inteiro: '))
+        numero2 = int(input('Digite outro número inteiro: '))
+        result = numero1 + numero2
+        if result > 10:
+            print('esse numero é:', result )   
 
 
 
-#2. Faça um programa que leia dois valores inteiros e efetue a adição.
-#   Caso o valor somado seja maior que 20, este deverá ser apresentado
-#   somando-se a ele mais 8, caso o valor somado seja menor ou igual a
-#   20, este deverá ser apresentado subtraindo-se 5.
-def q2():
-    x = 8
-    b = 5
-    numero1 = int(input('Digite um número inteiro: '))
-    numero2 = int(input('Digite outro número inteiro: '))
-    result = numero1 + numero2
-    if result > 20:
-        print('esse numero é:', result + x )
-    else:
-        print('esse numero é:', result - b )  
+    #2. Faça um programa que leia dois valores inteiros e efetue a adição.
+    #   Caso o valor somado seja maior que 20, este deverá ser apresentado
+    #   somando-se a ele mais 8, caso o valor somado seja menor ou igual a
+    #   20, este deverá ser apresentado subtraindo-se 5.
+    def q2():
+        x = 8
+        b = 5
+        numero1 = int(input('Digite um número inteiro: '))
+        numero2 = int(input('Digite outro número inteiro: '))
+        result = numero1 + numero2
+        if result > 20:
+            print('esse numero é:', result + x )
+        else:
+            print('esse numero é:', result - b )  
 
-#3. Faça um programa que leia um número e imprima uma das duas mensagens:
-#   "É múltiplo de 3"ou "Não é múltiplo de 3".
-def q3():
-    numero1 = int(input('Digite um número inteiro: '))
-    if numero1 % 3 == 0:
-        print('esse numero é multiplo:', numero1 )
-    else:
-        print('esse numero não é muktiplo de 3:', numero1 )  
+    #3. Faça um programa que leia um número e imprima uma das duas mensagens:
+    #   "É múltiplo de 3"ou "Não é múltiplo de 3".
+    def q3():
+        numero1 = int(input('Digite um número inteiro: '))
+        if numero1 % 3 == 0:
+            print('esse numero é multiplo:', numero1 )
+        else:
+            print('esse numero não é muktiplo de 3:', numero1 )  
 
-#4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
-def q4():
+    #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
+    def q4():
 
-    numero_1 = int(input('digite um numero inteiro:'))
-    if numero_1 % 5 == 0:
-        print('é divisivel:', numero_1)
-    else:
-        print('nao é divisivel:', numero_1)
-    print("fim da linha jogador ")
-#5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
-def q5():
-    numero_1 = float(input('digite um numero inteiro:'))
-    if {numero_1 % 3  == 0} & { numero_1 % 7 == 0} 
-        print('numero divisivel', numero_1)    
-    else:
-        print('nao divisivel', numero_1)
-   
+        numero_1 = int(input('digite um numero inteiro:'))
+        if numero_1 % 5 == 0:
+            print('é divisivel:', numero_1)
+        else:
+            print('nao é divisivel:', numero_1)
+        print("fim da linha jogador ")
+    #5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
+    def q5():
+        numero_1 = float(input('digite um numero inteiro:'))
+        if numero_1 % 3  == 0 and  numero_1 % 7 == 0:
+            print('numero divisivel', numero_1)    
+        else:
+            print('nao divisivel', numero_1)
+    
 
-#6. A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários
+   #6. A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários
 #   estatutários. O valor máximo da prestação não poderá ultrapassar 30% do salário
 #   bruto. Faça um programa que permita entrar com o salário bruto
 #   e o valor da prestação e informar se o empréstimo pode ou não ser concedido.
+def q6():
+    salario = float(input('Salário bruto: R$ '))
+    prestacao = float(input('Prestação para autorizar: R$ '))
+    prestacao_maxima = salario * 0.3
+    if prestacao > prestacao_maxima:
+        print('Empréstimo não autorizado')
+    else:
+        print('Empréstimo autorizado')
 
 #7. Faça um programa que leia um número e indique se o número está compreendido
 #   entre 20 e 50 ou não.
+def q7():
+    num = int(input('Número inteiro: '))
+    if 20<=num<=50: # num >= 20 and num <= 50
+        print('Está entre 20 e 50')
+    else:
+        print('Não está entre 20 e 50')
 
 #8. Faça um programa que leia um número e imprima uma das mensagens:
 #   "Maior do que 20", "Igual a 20"ou "Menor do que 20".
+def q8():
+    num = int(input('Número inteiro: '))
+    if num < 20:
+        print('É menor do que 20')
+    elif num > 20:
+        print('É maior do que 20')
+    else:
+        print('É igual a 20')
 
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
 #   verificar se o ano de nascimento informado é válido.
+def q9():
+    ano_nasc = int(input('Ano de nascimento: '))
+    ano_atual = int(input('Ano atual: '))
+    if ano_nasc > ano_atual:
+        print('ERRO: Não pode ter nascido no futuro')
+    else:
+        print(f'Idade: {ano_atual - ano_nasc} anos')
+
+def q91():
+    data_str = input('Data de nascimento (dd/mm/aaaa): ')
+    print(f'Ano atual: {datetime.strftime(HOJE,"%Y")}')
+    data_nascimento = datetime.strptime(data_str, '%d/%m/%Y')
+    if data_nascimento > HOJE:
+        print('Data de nascimento inválida!')
+    else:
+        print(f'Idade: {int((HOJE - data_nascimento).days/365)} anos.')
 
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
@@ -164,7 +206,7 @@ def q5():
 #• Se a soma dos pontos for maior do que 100, imprimir a média aritmética entre eles,
 #  caso contrário, imprimir a mensagem "Equipe desclassificada".
 
-#20. O banco XX concederá um crédito especial com juros de 2% aos seus clientes de
+#20. O banco XXX concederá um crédito especial com juros de 2% aos seus clientes de
 #acordo com o saldo médio no último ano. Faça um programa que leia o saldo médio
 #de um cliente e calcule o valor do crédito de acordo com a tabela a seguir.
 #O programa deve imprimir uma mensagem informando o saldo médio e o valor de
@@ -215,39 +257,40 @@ def q5():
 
 
 
+            
 
-def q20():
+
+
     cabecalho('QUESTÃO 20')
-
 menu = '''
-[1] - Imprimir nome
-[2] - Imprimir produto
-[3] - Imprimir média
-[4] - Imprimir inteiro
-[5] - Ler e imprimir números reais
-[6] - Antecessor e Sucessor
-[7] - Dados de cliente
-[8] - Subtração
-[9] - 1/4
-[10] - Média Aritmética
-[11] - Operações aritméticas básicas
-[12] - Quadrado de um número
-[13] - Saldo de poupança
-[14] - Área e perímetro de um retângulo
-[15] - Desconto em produto
-[16] - Reajuste Salarial
-[17] - Conversão de temperatura
-[18] - Consumo de veículo
-[19] - Juros de prestação atrasada
-[20] - Conversão dólar-real
-[21] - Reajuste Salarial
-[22] - Conversão de temperatura
-[23] - Consumo de veículo
-[24] - Juros de prestação atrasada
-[25] - Conversão dólar-real
+        [1] - Imprimir nome
+        [2] - Imprimir produto
+        [3] - Imprimir média
+        [4] - Imprimir inteiro
+        [5] - Ler e imprimir números reais
+        [6] - Antecessor e Sucessor
+        [7] - Dados de cliente
+        [8] - Subtração
+        [9] - 1/4
+        [10] - Média Aritmética
+        [11] - Operações aritméticas básicas
+        [12] - Quadrado de um número
+        [13] - Saldo de poupança
+        [14] - Área e perímetro de um retângulo
+        [15] - Desconto em produto
+        [16] - Reajuste Salarial
+        [17] - Conversão de temperatura
+        [18] - Consumo de veículo
+        [19] - Juros de prestação atrasada
+        [20] - Conversão dólar-real
+        [21] - Reajuste Salarial
+        [22] - Conversão de temperatura
+        [23] - Consumo de veículo
+        [24] - Juros de prestação atrasada
+        [25] - Conversão dólar-real
 
-Digite a opção a ser executada: 
-'''
+        Digite a opção a ser executada: 
+        '''
 
 opcao = input(menu)
 eval(f'q{opcao}()')
