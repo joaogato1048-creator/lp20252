@@ -2,6 +2,12 @@
 Exercícios sobre os comandos de condição em python
 '''
 
+def cabecalho (titulo):
+    print('========================================')
+    print(f'============= {titulo} ===============')
+    print('========================================')
+
+
 from datetime import date, datetime
 HOJE = datetime.now() #pega data e hjora do coputador 
 
@@ -31,10 +37,7 @@ def exemploSe_SenaoSe_Senao():
         print('Idoso')
     print('fim do programa')
 
-def cabecalho (titulo):
-    print('========================================')
-    print(f'============= {titulo} ===============')
-    print('========================================')
+
 
     #1. Faça um programa que leia dois valores numéricos inteiros e efetue
     #   a adição, caso o resultado seja maior que 10, apresentá-lo.
@@ -142,8 +145,20 @@ def q91():
     else:
         print(f'Idade: {int((HOJE - data_nascimento).days/365)} anos.')
 
-#10. Faça um programa que leia três números inteiros e imprima os três em ordem
-#crescente.
+    #10. Faça um programa que leia três números inteiros e imprima os três em ordem
+    #crescente.
+def q10():
+
+num1 = int(input('digitr primeiro numero '))
+num2 = int(input('digitr segundo numero '))
+num3 = int(input('digitr terceiro  numero '))
+    if num1 < num2 and num2 < num3:
+        print(  num1 = posicao1 and num2 = posicao2 and num3 = posicao )
+                
+    
+    
+
+
         
 #11. Faça um programa que leia 3 números e imprima o maior deles.
 
@@ -254,43 +269,38 @@ def q91():
 #0,3 1º grupo
 #0,4 1º e 2º grupos
 #0,5 1º, 2º e 3º grupos
-
-
-
-            
-
-
-
+ def q25():
     cabecalho('QUESTÃO 20')
-menu = '''
-        [1] - Imprimir nome
-        [2] - Imprimir produto
-        [3] - Imprimir média
-        [4] - Imprimir inteiro
-        [5] - Ler e imprimir números reais
-        [6] - Antecessor e Sucessor
-        [7] - Dados de cliente
-        [8] - Subtração
-        [9] - 1/4
-        [10] - Média Aritmética
-        [11] - Operações aritméticas básicas
-        [12] - Quadrado de um número
-        [13] - Saldo de poupança
-        [14] - Área e perímetro de um retângulo
-        [15] - Desconto em produto
-        [16] - Reajuste Salarial
-        [17] - Conversão de temperatura
-        [18] - Consumo de veículo
-        [19] - Juros de prestação atrasada
-        [20] - Conversão dólar-real
-        [21] - Reajuste Salarial
-        [22] - Conversão de temperatura
-        [23] - Consumo de veículo
-        [24] - Juros de prestação atrasada
-        [25] - Conversão dólar-real
 
-        Digite a opção a ser executada: 
-        '''
+menu = '''''
+    [1] - Imprimir nome
+    [2] - Imprimir produto
+    [3] - Imprimir média
+    [4] - Imprimir inteiro
+    [5] - Ler e imprimir números reais
+    [6] - Antecessor e Sucessor
+    [7] - Dados de cliente
+    [8] - Subtração
+    [9] - 1/4
+    [10] - Média Aritmética
+    [11] - Operações aritméticas básicas
+    [12] - Quadrado de um número
+    [13] - Saldo de poupança
+    [14] - Área e perímetro de um retângulo
+    [15] - Desconto em produto
+    [16] - Reajuste Salarial
+    [17] - Conversão de temperatura
+    [18] - Consumo de veículo
+    [19] - Juros de prestação atrasada
+    [20] - Conversão dólar-real
+    [21] - Reajuste Salarial
+    [22] - Conversão de temperatura
+    [23] - Consumo de veículo
+    [24] - Juros de prestação atrasada
+    [25] - Conversão dólar-real
+    Digite a opção a ser executada: 
+'''
 
 opcao = input(menu)
 eval(f'q{opcao}()')
+  
