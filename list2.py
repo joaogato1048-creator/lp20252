@@ -2,6 +2,8 @@
 Exercícios sobre os comandos de condição em python
 '''
 
+from tkinter import Label, Entry, Button,Tk, messagebox
+
 def cabecalho (titulo):
     print('========================================')
     print(f'============= {titulo} ===============')
@@ -148,30 +150,79 @@ def q91():
     #10. Faça um programa que leia três números inteiros e imprima os três em ordem
     #crescente.
 def q10():
-
-num1 = int(input('digitr primeiro numero '))
-num2 = int(input('digitr segundo numero '))
-num3 = int(input('digitr terceiro  numero '))
-    if num1 < num2 and num2 < num3:
-        print(  num1 = posicao1 and num2 = posicao2 and num3 = posicao )
-                
+    a = int(input('Número: '))
+    b = int(input('Número: '))
+    c = int(input('Número: '))
+    if a<b<c:
+        print(a,b,c)
+    if a<c<b:
+        print(a,c,b)
+    if b<a<c:
+        print(b,a,c)
+    if b<c<a:
+        print(b,c,a)
+    if c<a<b:
+        print(c,a,b)
+    if c<b<a:
+        print(c,b,a)          
     
-    
-
 
         
 #11. Faça um programa que leia 3 números e imprima o maior deles.
+def q11():
+    num = int(input('Número: '))
+    maior = num
+    num = int(input('Número: '))
+    if num > maior:
+        maior = num
+    num = int(input('Número: '))
+    if num > maior:
+        maior = num
+    print(maior)
+
+def q112():
+    a = int(input('Número: '))
+    b = int(input('Número: '))
+    c = int(input('Número: '))
+    print(max([a,b,c]))
 
 #12. Faça um programa que leia a idade de uma pessoa e informe:
 #• Se é maior de idade
 #• Se é menor de idade
 #• Se é maior de 65 anos
+def q13():
+
+    def show_idade(): 
+       
+        window = Tk()
+        window.titler ('Questão 12 ')
+        window.configure(padx=10, pady=10)
+        lbl_idade = Label (text = 'idade:')
+        lbl_idade.grid(row=0, column=0)
+        global txt_idade
+        txt_idade = Entry (wifth=6)
+        txt_idade.grid(row=0, column=1)
+        txt_idade.focus()
+        btn_ok = Button(text='stop', width = 5, command=show_idade )
+        btn_ok.grid(row = 1, column=0, columnspan=2)
+        window.mainloop()
+
+def q13():
+    
+    idade = int(input('digite a idade'))
+    if idade > 18:
+        print('maior de idade ')
+    elif  idade < 18:
+        print('menor  de idade ')
+    else:
+        print('maior que 65 anos')
 
 #13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota
 #da prova 2 de um aluno. O programa deve imprimir o nome, a nota da prova 1,
 #a nota da prova 2, a média das notas e uma das mensagens: "Aprovado",
 #"Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
 #reprovação e as demais em prova final).
+
 
 #14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
 #desconto do INSS segundo a tabela seguir:
@@ -269,7 +320,8 @@ num3 = int(input('digitr terceiro  numero '))
 #0,3 1º grupo
 #0,4 1º e 2º grupos
 #0,5 1º, 2º e 3º grupos
- def q25():
+def q25():
+
     cabecalho('QUESTÃO 20')
 
 menu = '''''
