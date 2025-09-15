@@ -190,7 +190,7 @@ def q112():
 #• Se é maior de idade
 #• Se é menor de idade
 #• Se é maior de 65 anos
-def q13():
+def q12():
 
     def show_idade(): 
        
@@ -222,7 +222,22 @@ def q13():
 #a nota da prova 2, a média das notas e uma das mensagens: "Aprovado",
 #"Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
 #reprovação e as demais em prova final).
+def q13():
+    
+    nome = (input('qual seu nome: '))
+    nota1 = int(input('primeira nota: '))
+    nota2 =  int(input('segunda nota: '))
+    media = (nota1 + nota2) /2
+    print('MEDIA: ', media)
 
+    if media >= 7:
+        print('aprovado')
+    if media < 3 :
+        print('reprovado')
+    if  media > 3  and media < 7:
+        print('prova final ')
+
+    
 
 #14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
 #desconto do INSS segundo a tabela seguir:
@@ -231,11 +246,26 @@ def q13():
 #Maior que R$600,00 e menor ou igual a R$1200,00 20%
 #Maior que R$1200,00 e menor ou igual a R$2000,00 25%
 #Maior que R$2000,00 30%
+def q14():
+    salario = int(input('digite seu salário '))
+    result1 = salario * 0.2 
+    result2 = result1 - salario 
+    if salario > 600 and salario <= 1200:
+        print('salaario com desc: ', result2)
+    if salario > 1200 and salario <= 2000:
+        print('salaario com desc: ', result2)
+    if salario > 1200 and salario <= 2000:
+        print('salaario com desc: ', result2)
+    elif salario <= 600:
+        print ('isento ') 
+       
+        
 
 #15. Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o
 #valor da compra for menor que R$20,00, caso contrário, o lucro será de 30%.
 #Faça um programa que leia o valor do produto e imprima o valor da venda.
-
+def q15():
+    
 #16. A confederação brasileira de natação irá promover eliminatórias para o
 #próximo mundial. Faça um programa que receba a idade de um nadador e imprima
 #a sua categoria segundo a tabela a seguir:
