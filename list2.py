@@ -11,7 +11,21 @@ def cabecalho (titulo):
 
 
 from datetime import date, datetime
+
+data_exemplo = datetime.date(2024, 10, 26)
+
 HOJE = datetime.now() #pega data e hjora do coputador 
+nomes_meses = ["", "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", 
+               "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+
+
+
+nome_mes_completo = data_exemplo.strftime('%B')
+print(f"Nome completo do mês: {nome_mes_completo}") 
+
+# Obter o nome abreviado do mês
+nome_mes_abreviado = data_exemplo.strftime('%b')
+print(f"Nome abreviado do mês: {nome_mes_abreviado}") 
 
 
 def exemploSe():
@@ -265,7 +279,13 @@ def q14():
 #valor da compra for menor que R$20,00, caso contrário, o lucro será de 30%.
 #Faça um programa que leia o valor do produto e imprima o valor da venda.
 def q15():
-    
+
+    VLRproduto = float(input('valor do produto:  '))
+    if VLRproduto < 20:
+     print(VLRproduto * 1.45)
+    else:
+        print(VLRproduto * 1.30)
+
 #16. A confederação brasileira de natação irá promover eliminatórias para o
 #próximo mundial. Faça um programa que receba a idade de um nadador e imprima
 #a sua categoria segundo a tabela a seguir:
@@ -275,6 +295,18 @@ def q15():
 #Juvenil A 11 - 13 anos
 #Juvenil B 14 - 17 anos
 #Sênior maiores de 18 anos
+def q16():
+    idade = int(input('Qual sua idade ?: '))
+    if idade >= 5 and idade <= 7:
+        print('infantil   A') 
+    elif idade >= 8 and idade <= 10:
+        print('infantil   B')
+    elif idade >= 11 and idade <= 13:
+        print('Juvenil     A')
+    elif idade > 14 and idade < 17:
+        print('Juvenil    B')
+    elif idade > 17 :
+        print('sênior maiores de 18 anos')
 
 #17. Depois da liberação do governo para as mensalidades dos planos de saúde,
 #as pessoas começaram a fazer pesquisas para descobrir um bom plano, não
@@ -288,10 +320,47 @@ def q15():
 #Acima de 45 até 59 anos R$150,00
 #Acima de 59 até 65 anos R$250,00
 #Maior que 65 anos R$400,00
+def q17():
+    valor1 = 30.0
+    valor2 = 60.0
+    valor3 = 120.0
+    valor4 = 150.0
+    valor5 = 250.0
+    valor6 = 400.0 
+    nome = input('Qual seu nome ?: ')
+    idade = int(input('Qual sua idade ?: '))
+    
+    
+    
+    if idade > 1 and idade <= 10:
+        print('R$  ', valor1)
+
+    elif idade > 10 and idade <= 29:
+         print( 'R$  ', valor2)
+
+    elif idade > 29 and idade <= 45:
+            print('R$  ', valor3)
+                
+    if idade > 45 and idade <= 59:
+            print('R$  ', valor4)
+
+    elif idade > 59 and idade <= 65:
+            print('R$  ', valor5)
+                
+    elif idade > 65 :
+            print('R$  ', valor6)
+
 
 #18. Faça um programa que leia um número inteiro entre 1 e 12 e escreva o mês
 #correspondente. Caso o usuário digite um número fora desse intervalo, deverá
 #aparecer uma mensagem informando que não existe mês com este número.
+def q18():
+   numero_mes = 10
+   nome_do_mes = nomes_meses[numero_mes]
+
+   print(f"o nome do mêes numero{numero_mes} é: {nome_do_mes }")
+
+    
 
 #19. Em um campeonato nacional de arco-e-flecha, tem-se equipes de três jogadores
 #para cada estado. Sabendo-se que os arqueiros de uma equipe não obtiveram o
