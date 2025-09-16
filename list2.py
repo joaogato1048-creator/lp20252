@@ -12,7 +12,7 @@ def cabecalho (titulo):
 
 from datetime import date, datetime
 
-data_exemplo = datetime.date(2024, 10, 26)
+
 
 HOJE = datetime.now() #pega data e hjora do coputador 
 nomes_meses = ["", "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", 
@@ -20,12 +20,12 @@ nomes_meses = ["", "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
 
 
 
-nome_mes_completo = data_exemplo.strftime('%B')
-print(f"Nome completo do mês: {nome_mes_completo}") 
+##nome_mes_completo = data_exemplo.strftime('%B')
+##print(f"Nome completo do mês: {nome_mes_completo}") 
 
 # Obter o nome abreviado do mês
-nome_mes_abreviado = data_exemplo.strftime('%b')
-print(f"Nome abreviado do mês: {nome_mes_abreviado}") 
+##nome_mes_abreviado = data_exemplo.strftime('%b')
+##print(f"Nome abreviado do mês: {nome_mes_abreviado}") 
 
 
 def exemploSe():
@@ -355,10 +355,33 @@ def q17():
 #correspondente. Caso o usuário digite um número fora desse intervalo, deverá
 #aparecer uma mensagem informando que não existe mês com este número.
 def q18():
-   numero_mes = 10
-   nome_do_mes = nomes_meses[numero_mes]
-
-   print(f"o nome do mêes numero{numero_mes} é: {nome_do_mes }")
+    mes = int(input('Digite o mes desejado fdp '))
+    match mes:
+         
+        case 1: 
+                print('janeiro')
+        case 2:
+                print('Fervereiro')
+        case 3:
+                print('março')
+        case 4:
+                print('Abril')
+        case 5:
+                print('Maio')
+        case 6:
+                print('Junho')
+        case 7:
+                print('Julho')
+        case 8:
+                print('Agosto')
+        case 9:
+                print('setembro')
+        case 10:
+                print('Outubro')
+        case 11:
+                print('November')
+        case 12:
+                print('Dezembro')
 
     
 
@@ -370,6 +393,9 @@ def q18():
 #• Mostrar esses em ordem decrescente;
 #• Se a soma dos pontos for maior do que 100, imprimir a média aritmética entre eles,
 #  caso contrário, imprimir a mensagem "Equipe desclassificada".
+def q19():
+
+
 
 #20. O banco XXX concederá um crédito especial com juros de 2% aos seus clientes de
 #acordo com o saldo médio no último ano. Faça um programa que leia o saldo médio
@@ -402,6 +428,24 @@ def q18():
 #Peixe          230cal Sorvete diet     110cal Suco de laranja   70cal
 #Frango         250cal Mousse diet      170cal Suco de melão     100cal
 #Carne          350cal Mousse chocolate 200cal Refrigerante diet 65cal
+def q23():
+    prato = input('prato(vegetariano/ peixe/ frango/ carne)')
+    calorias = 0 
+    calorias += 100 if prato += 'vegetariano' else 0
+    calorias += 230 if prato += 'peixe' else 0
+    calorias += 250 if prato += 'frango' else 0
+    calorias += 350 if prato += 'carne' else 0
+    sobremesa = input('sobremesa(abacaxi/ sorvete/ mouse deit/ mouse choco)')
+    calorias += 75 if sobremesa += 'abacaxi' else 0
+    calorias += 110 if sobremesa += 'sorvete' else 0
+    calorias += 170 if sobremesa += 'mouse deit' else 0
+    calorias += 200 if sobremesa += 'mouse choco' else 0
+    sobremesa = input('sobremesa(cha/ suco de la/ suco de me/ refri)')
+    calorias += 20  if bebida += 'cha' else 0
+    calorias += 70 if bebida += 'suco de la' else 0
+    calorias += 100 if bebida += 'suco de me' else 0
+    calorias += 65 if bebida += 'mouse choco' else 0
+
 
 #24. A polícia rodoviária resolveu fazer cumprir a lei e vistoriar veículos para
 #cobrar dos motoristas o DUT. Sabendo-se que o mês em que o emplacamento do
@@ -419,7 +463,7 @@ def q18():
 #0,3 1º grupo
 #0,4 1º e 2º grupos
 #0,5 1º, 2º e 3º grupos
-def q25():
+
 
     cabecalho('QUESTÃO 20')
 
