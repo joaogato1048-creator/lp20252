@@ -1,6 +1,12 @@
 '''
 Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
+from tkinter import Label, Entry, Button,Tk, messagebox
+
+def cabecalho (titulo):
+    print('========================================')
+    print(f'============= {titulo} ===============')
+    print('========================================')
 
 def exemploPara():
     for contador in range(10):
@@ -22,12 +28,26 @@ def exemploEnquanto():
             continue
         print(contador, end=' ')
 
+
 #1.Faça um programa que imprima todos os números de 1 até 100.
-
+def q1():
+    contador = 0
+    while contador < 100:
+        contador += 1
+        print(contador, end=' ')
+   
 #2. Faça um programa que imprima todos os números pares de 100 até 1.
-
+def q2():
+    contador = 100
+    while contador < 1:
+        contador - 1
+        print(contador, end='')
 #3. Faça um programa que imprima os múltiplos de 5, no intervalo de 1 até 500.
-
+def q3():
+    contador = 100
+    while contador < 1:
+        contador -- 2
+        print(contador, end='')
 #4. Faça um programa que permita entrar com o nome, a idade e o sexo de 20
 #pessoas.O programa deve imprimir o nome da pessoa se ela for do sexo masculino
 #e tiver mais de 21 anos.
@@ -226,7 +246,7 @@ def exemploEnquanto():
 #acima de R$5000 25%
 #e) o valor de CIC igual a zero indica final de dados;
 #f ) o programa deverá imprimir, para cada contribuinte, o número do CIC e o
-#imposto a ser pago;
+#imposto a ser pago;1
 #g) ao final o programa deverá imprimir o total do imposto arrecadado pela
 #Receita Federal e o número de contribuintes isentos;
 #h) leve em consideração o fato de o primeiro CIC informado poder ser zero.
@@ -279,5 +299,47 @@ def exemploEnquanto():
 #Obs.: Para encerrar a entrada de dados, digite um número menor que zero para a
 #idade.
 
-questao = int(input('Questão a ser executada: '))
-eval(f'q{questao}()')
+
+
+
+
+
+cabecalho('QUESTÃO 20')
+
+menu = '''''
+    [1] - Imprimir nome
+    [2] - Imprimir produto
+    [3] - Imprimir média
+    [4] - Imprimir inteiro
+    [5] - Ler e imprimir números reais
+    [6] - Antecessor e Sucessor
+    [7] - Dados de cliente
+    [8] - Subtração
+    [9] - 1/4
+    [10] - Média Aritmética
+    [11] - Operações aritméticas básicas
+    [12] - Quadrado de um número
+    [13] - Saldo de poupança
+    [14] - Área e perímetro de um retângulo
+    [15] - Desconto em produto
+    [16] - Reajuste Salarial
+    [17] - Conversão de temperatura
+    [18] - Consumo de veículo
+    [19] - Juros de prestação atrasada
+    [20] - Conversão dólar-real
+    [21] - Reajuste Salarial
+    [22] - Conversão de temperatura
+    [23] - Consumo de veículo
+    [24] - Juros de prestação atrasada
+    [25] - Conversão dólar-real
+    [26]
+    [27]
+    [28]
+    [29]
+    [30]    
+    Digite a opção a ser executada: 
+'''
+
+opcao = input(menu)
+eval(f'q{opcao}()')
+  
