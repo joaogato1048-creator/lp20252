@@ -44,17 +44,33 @@ def q2():
         print(contador, end='')
 #3. Faça um programa que imprima os múltiplos de 5, no intervalo de 1 até 500.
 def q3():
-    contador = 100
-    while contador < 1:
-        contador -- 2
-        print(contador, end='')
+    for numero in range(100,1,-2):
+        print(numero, end='')
+
 #4. Faça um programa que permita entrar com o nome, a idade e o sexo de 20
 #pessoas.O programa deve imprimir o nome da pessoa se ela for do sexo masculino
 #e tiver mais de 21 anos.
+def q4():
+
+    MAX = 20
+    for pessoa in range(MAX):
+        nome = input ('Nome: ')
+        idade = int(input ('Idade: '))
+        sexo = input ('Sexo (M/F): ')
+        if sexo.upper() == 'M' and idade >= 21:
+            print(nome)
+
 
 #5. Sabendo-se que a unidade lógica e aritmética calcula o produto através de somas
 #sucessivas, crie um programa que calcule o produto de dois números inteiros
 #lidos. Suponha que os números lidos sejam positivos.
+def q5():
+    num1 = int(input('Multiplicador: '))
+    num2 = int(input('Multiplicador: '))
+    soma = 0
+    for _ in range(num1):
+        soma = soma + num2
+        print(F'{num1}*{num2}={soma}')
 
 #6. Crie um programa que imprima os 20 primeiros termos da série de Fibonacci.
 #Observação: os dois primeiros termos desta série são 1 e 1 e os demais são gerados
@@ -62,11 +78,37 @@ def q3():
 #• 1 + 1 = 2, terceiro termo;
 #• 1 + 2 = 3, quarto termo, etc.
 # 1 1 2 3 5 8 13 21
+def q6():
+    ant = 0
+    atu = 1
+    for _ in range(20):
+        print(atu, end ='')
+        prox = ant + atu
+        ant = atu
+        atu = prox
 
 #7. Crie um programa que permita entrar com o nome, a nota da
 #prova 1 e da prova 2 de 15 alunos. Ao final, imprimir uma listagem, contendo:
 #nome, nota da prova 1, nota da prova 2, e média das notas de cada aluno. Ao final,
 #imprimir a média geral da turma.
+def q7():
+    resultado = "NOME\tN1\tN2\tMEDIA\n"
+    MAX = 3
+    media_turma = 0
+    for _ in range(MAX):
+        nome = input('Nome: ')
+        n1 = round(float(input('Nota 1: ')),1)
+        n2 = round(float(input('Nota 2: ')),1)
+        media = round((n1 + n2) / 2,1)
+        media_turma += media
+        resultado += f'{nome}\t{n1}\t{n2}\t{media}\n'
+    print(resultado)
+    print(f'Média da Turma: {round(media_turma/MAX,1)})
+
+
+     
+        
+
 
 #8. Faça um programa que permita entrar com o nome e o salário bruto de 10 pessoas.
 #Após ler os dados, imprimir o nome e o valor da alíquota do imposto de renda
