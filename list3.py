@@ -103,7 +103,7 @@ def q7():
         media_turma += media
         resultado += f'{nome}\t{n1}\t{n2}\t{media}\n'
     print(resultado)
-    print(f'Média da Turma: {round(media_turma/MAX,1)})
+    print (f' Média da Turma: {round(media_turma/MAX,1)}')
 
 
      
@@ -117,6 +117,20 @@ def q7():
 #Salário menor que R$1300,00 Isento
 #Salário maior ou igual a R$1300,00 e menor que R$2300,00 10% do salário bruto
 #Salário maior ou igual a R$2300,00 15% do salário bruto
+def q8():
+
+    resultado = "\nNome:\n salario\n"
+    MAX = 3
+
+    for _ in range(MAX):
+        nome = round(input('Nome: '))
+        salario = round(float(input('SALARIO_UM')))
+
+        resultado += f'{nome}\t {salario}\n'
+    print(resultado)
+
+
+
 
 #9. No dia da estreia do filme "Procurando Dory", uma grande emissora de TV realizou
 #uma pesquisa logo após o encerramento do filme. Cada espectador respondeu
@@ -128,6 +142,46 @@ def q7():
 #• A percentagem de pessoas que responderam bom entre todos os expectadores
 #analisados.
 
+def q9():
+    
+
+    resultado = "\nNome\tIdade\tOpinião\n"
+    MAX = 3
+    qtd_excelente = 0
+    qtd_bom = 0
+    qtd_regular = 0
+
+    for _ in range(MAX):
+        nome = input('Nome: ')
+        idade = int(input('Idade do guerreiro(a): '))
+        
+        while True:
+            try:
+                opiniao = int(input("Digite sua opinião:\n1 - Excelente\n2 - Bom\n3 - Regular\n"))
+                if opiniao in [1, 2, 3]:
+                    break
+                else:
+                    print("Opção inválida. Digite 1, 2 ou 3.")
+
+            except ValueError:
+                print("Entrada inválida. Digite um número inteiro.")
+
+    
+        if opiniao == 1:
+            qtd_excelente += 1
+            opiniao_str = "Excelente"
+        elif opiniao == 2:
+            qtd_bom += 1
+            opiniao_str = "Bom"
+        else:
+            qtd_regular += 1
+            opiniao_str = "Regular"
+        
+        resultado += f'{nome}\t{idade}\t{opiniao_str}\n'
+
+        print(resultado)
+ 
+
 #10. Em um campeonato Europeu de Volleyball, se inscreveram 30 países. Sabendo-se
 #que na lista oficial de cada país consta, além de outros dados, peso e idade de 12
 #jogadores, crie um programa que apresente as seguintes informações:
@@ -136,6 +190,12 @@ def q7():
 #• O atleta mais pesado de cada time;
 #• O atleta mais jovem de cada time;
 #• O peso médio e a idade média de todos os participantes.
+
+
+
+
+
+
     
 #11. Construa um programa que leia vários números e informe quantos números
 #entre 100 e 200 foram digitados. Quando o valor 0 (zero) for lido, o algoritmo
@@ -344,9 +404,7 @@ def q7():
 
 
 
-
-
-cabecalho('QUESTÃO 20')
+cabecalho('QUESTÃO 30')
 
 menu = '''''
     [1] - Imprimir nome
@@ -384,4 +442,3 @@ menu = '''''
 
 opcao = input(menu)
 eval(f'q{opcao}()')
-  
