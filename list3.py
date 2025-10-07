@@ -190,8 +190,51 @@ def q9():
 #• O atleta mais pesado de cada time;
 #• O atleta mais jovem de cada time;
 #• O peso médio e a idade média de todos os participantes.
+def q10():
+    for PAISES in range(2):
+        media_grupo = 0 
+        Ps = 0
+        idade = 0
+        for GRUPO in range(2):
+            Psmax = 0
+            media = "\Ps\idade\n"
+            nome = input('Digite seu nome ')
+            Ps = float(input("digite seu peso: "))
+            idade = int(input("Digite sua idade "))
+
+            unidade = '\n nome \nPs \n iade '
+            if Ps > Psmax:
+                        Psmax = Ps
+                        nome_mais_pesado = nome
+            if Ps < Psmin:
+                        Psmin = Ps
+                        nome_mais_leve = nome
+                    
+            if idade > idade_max:
+                        idade_max = idade
+                        nome_mais_velho = nome
+            if idade < idade_min:
+                        idade_min = idade
+                        nome_mais_novo = nome
+
+                
+            print("\nResultado:")
+            print(f"Mais pesado: {nome_mais_pesado} com {Psmax} kg")
+            print(f"Mais leve: {nome_mais_leve} com {Psmin} kg")
+            print(f"Mais velho: {nome_mais_velho} com {idade_max} anos")
+            print(f"Mais novo: {nome_mais_novo} com {idade_min} anos")
+                   
+            
 
 
+            media_grupo += media
+  
+
+
+     
+
+
+        
 
 
 
