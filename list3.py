@@ -244,6 +244,20 @@ def q10():
 #entre 100 e 200 foram digitados. Quando o valor 0 (zero) for lido, o algoritmo
 #deverá cessar sua execução.
 
+MAX= 300
+for _ in range(MAX):
+     MAX = int(input('Digite os numeros:'))
+
+    contador = 0
+    while contador < 10:
+        contador += 1               # equivale a contador = contador + 1
+        if contador == 7:
+            break  
+     
+
+
+
+
 #12. Dado um país A, com 5 milhões de habitantes e uma taxa de natalidade de 3% ao
 #ano, e um país B com 7 milhões de habitantes e uma taxa de natalidade de 2% ao
 #ano, fazer um programa que calcule e imprima o tempo necessário para que a
