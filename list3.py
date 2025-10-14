@@ -243,17 +243,15 @@ def q10():
 #11. Construa um programa que leia vários números e informe quantos números
 #entre 100 e 200 foram digitados. Quando o valor 0 (zero) for lido, o algoritmo
 #deverá cessar sua execução.
-
-MAX= 300
-for _ in range(MAX):
-     MAX = int(input('Digite os numeros:'))
-
-    contador = 0
-    while contador < 10:
-        contador += 1               # equivale a contador = contador + 1
-        if contador == 7:
-            break  
-     
+def q():
+    contador = 0    # qtde de números entre 100 e 200
+    while True:     # laço infinito
+        numero = random.randrange(201)
+        print(numero, end=' ')
+        contador += 1 if numero >= 100 and numero <= 200 else 0
+        if numero == 0:
+            break   # interrompe o laço
+    print(f'\nQtde de números entre 100 e 200: {contador}')
 
 
 
@@ -262,6 +260,9 @@ for _ in range(MAX):
 #ano, e um país B com 7 milhões de habitantes e uma taxa de natalidade de 2% ao
 #ano, fazer um programa que calcule e imprima o tempo necessário para que a
 #população do país A ultrapasse a população do país B.
+
+     
+
 
 #13. Uma empresa de fornecimento de energia elétrica faz a leitura mensal dos medidores
 #de consumo. Para cada consumidor, são digitados os seguintes dados:
@@ -280,10 +281,48 @@ for _ in range(MAX):
 #14. Faça um programa que leia vários números inteiros e apresente o fatorial de cada
 #número. O algoritmo encerra quando se digita um número menor do que 1.n
 
+def fatorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n*fatorial(n-1)
+
+def q14():
+    n = 1
+    while n != 0:
+        n = int(input('Digite o número para cálculo: '))
+        print(fatorial(n))
+
+
+
+
+
+
 #15. Faça um programa que permita entrar com a idade de várias pessoas e
 #imprima:
 #• total de pessoas com menos de 21 anos
 #• total de pessoas com mais de 50 anos
+def q15():
+ 
+    
+  while True:   
+             
+    max = 3
+    
+    for _ in range(max):
+
+        nome = input('nome: ')
+        idade = int(input('idade: '))
+
+        if {idade < 21}:
+            print ( f'\n nome \t idada \n', )
+             
+
+        
+              
+         
+
+
 
 #16. Sabendo-se que a unidade lógica e aritmética calcula a divisão por meio de subtrações
 #sucessivas, criar um algoritmo que calcule e imprima o resto da divisão de
