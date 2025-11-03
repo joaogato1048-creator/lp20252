@@ -2,6 +2,7 @@
 Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
 from tkinter import Label, Entry, Button,Tk, messagebox
+import random 
 
 def cabecalho (titulo):
     print('========================================')
@@ -244,6 +245,8 @@ def q10():
 #entre 100 e 200 foram digitados. Quando o valor 0 (zero) for lido, o algoritmo
 #deverá cessar sua execução.
 def q():
+
+ 
     contador = 0    # qtde de números entre 100 e 200
     while True:     # laço infinito
         numero = random.randrange(201)
@@ -303,24 +306,28 @@ def q14():
 #• total de pessoas com menos de 21 anos
 #• total de pessoas com mais de 50 anos
 def q15():
- 
-    
-  while True:   
-             
-    max = 3
-    
-    for _ in range(max):
-
-        nome = input('nome: ')
-        idade = int(input('idade: '))
-
-        if {idade < 21}:
-            print ( f'\n nome \t idada \n', )
-             
-
         
-              
-         
+    s1 = 0
+    s = 0
+    idade = random.randint(1,10)
+    idadedois = random.randint(1,10)
+    for c in range(0, idade+1):
+            if idade < 21:
+                s += idade+1
+            else:
+                print('segue')
+   
+    for D in range(0, idadedois+1):
+            if idadedois > 50:
+                s1 += idade+1
+
+            else:
+                print('segue')  
+   
+    print('Pessoas com menos de 21 anos:')
+    print(c)
+    print('Pessoas com mais de 50 anos:')           
+    print(D)
 
 
 
@@ -346,6 +353,18 @@ def q15():
 #• quantidade
 #O programa deverá processar novos pedidos até que o usuário digite 0 (zero)
 #como número do pedido.
+
+def q17():
+
+    carrinho = [1,2,3,4,5]
+    total = 0
+    data = input(f'Data do pedido (dd/mm/aaaa): ')   
+    for item in carrinho:   
+        preco = float(input(f'Preço do item {item}: R$ '))
+        quantidade = int(input(f'Quantidade do item {item}: '))
+        total += preco * quantidade
+        parar = input('Deseja continuar? (s/n): ')
+    print(f'Total da compra: R$ {total}')
 
 #18. Uma pousada estipulou o preço para a diária em R$30,00 e mais uma taxa de
 #serviços diários de:
