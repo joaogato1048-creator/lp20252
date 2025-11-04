@@ -355,15 +355,18 @@ def q15():
 #como número do pedido.
 
 def q17():
-
-    carrinho = [1,2,3,4,5]
+    
+    carrinho = [produtos['produto_id'] for produtos in [{'produto_id': 1}, {'produto_id': 2}, {'produto_id': 3}, {'produto_id': 4}, {'produto_id': 5}   ]]
     total = 0
-    data = input(f'Data do pedido (dd/mm/aaaa): ')   
+    ##data = input(f'Data do pedido (dd/mm/aaaa): ')   
     for item in carrinho:   
         preco = float(input(f'Preço do item {item}: R$ '))
         quantidade = int(input(f'Quantidade do item {item}: '))
         total += preco * quantidade
-        parar = input('Deseja continuar? (s/n): ')
+        if item == 0:
+            break
+        else:
+            continue
     print(f'Total da compra: R$ {total}')
 
 #18. Uma pousada estipulou o preço para a diária em R$30,00 e mais uma taxa de
@@ -374,7 +377,28 @@ def q17():
 #cliente e ao final o total faturado pela pousada.
 #O programa deverá ler novos clientes até que o usuário digite 0 (zero) como
 #número da conta.
+def q18():  
+    total_faturado = 0
+    diaria = {30}
 
+    nome = input('Nome do cliente: ')
+    dias = int(input('QUANTOS DIAS DE HOSPEDAGEM: '))
+    numero_conta = diaria * dias
+    if dias < 10:
+        taxa_servico = 15
+    else:
+        taxa_servico = 8
+    conta = numero_conta + taxa_servico
+    total_faturado += conta
+
+       dados = {
+        1:[1,"Borracha",7.8],
+        2:[2,"Lápis", 2.75],
+        3:[3,"Caderno 100fls", 13.23],
+        4:[4,"Refrigerante 310ml", 5]
+    }
+   
+    }
 #19. Em uma Universidade, os alunos das turmas de informática fizeram uma prova
 #de algoritmos. Cada turma possui um número de alunos. Criar um programa que
 #imprima:
